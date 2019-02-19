@@ -36,12 +36,18 @@ header {
   position: relative;
 }
 
+.nav-block {
+  width: 560px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
 .nav-menu-left {
   display: flex;
-  width: 150px;
+  width: 200px;
   justify-content: space-between;
   align-items: center;
-  margin-left: 415px;
 }
 
 .nav-menu-right {
@@ -49,7 +55,6 @@ header {
   width: 200px;
   justify-content: space-between;
   align-items: center;
-  margin-left: 165px;
 }
 
 .nav-item {
@@ -71,12 +76,10 @@ header {
   display: block;
   width: 154px;
   height: 127px;
-  position: absolute;
-  right: 43%;
-  top: 3px;
   background-image: url(images/Logo.png);
   background-position: center;
   background-repeat: no-repeat;
+  margin-top: 35px;
 }
 
 .welcome-block {
