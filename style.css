@@ -3,9 +3,11 @@
   margin: 0;
   padding: 0;
 }
+
 .clearfix {
   clear: both;
 }
+
 .wrapper {
   width: 1300px;
   font-family: sans-serif;
@@ -116,4 +118,258 @@ header {
 .see-menu-button:focus {
   outline: none;
   box-shadow: 2px 2px 6px #f5d76e;
+}
+
+.block-title {
+  color: black;
+  text-align: center;
+  font-size: 32px;
+  padding: 75px 0 40px;
+  font-weight: normal;
+}
+
+.about-us-text {
+  color: black;
+  text-align: center;
+  font-size: 16px;
+  width: 750px;
+  padding-bottom: 70px;
+  margin: 0 auto;
+}
+
+.coffee-icon {
+  display: block;
+  width: 39px;
+  height: 39px;
+  background-image: url(images/CoffeeIcon.png);
+  background-position: top center;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+
+.menu-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-section {
+  display: block;
+  width: 396px;
+  list-style-type: none;
+}
+
+.menu-picture {
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 396px;
+  height: 295px;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  font-weight: normal;
+}
+
+.coffee-menu-picture {
+  background-image: url(images/CupOfCoffee.png);
+}
+
+.tea-menu-picture {
+  background-image: url(images/CupOfTea.png);
+}
+
+.desert-menu-picture {
+  background-image: url(images/Dessert.png);
+}
+
+.assortment {
+  display: block;
+  width: 235px;
+  margin: 40px auto 55px;
+}
+
+.position {
+  font-size: 16px;
+}
+
+.name {
+  display: block;
+  width: 185px;
+}
+
+.see-full-menu {
+  width: 232px;
+  height: 52px;
+  border: 1px black solid;
+  color: black;
+  background-color: transparent;
+  font-size: 13px;
+  display: block;
+  margin: 0 auto 65px;
+}
+
+.see-full-menu:hover {
+  box-shadow: 2px 2px 4px lightgrey;
+}
+
+.see-full-menu:focus {
+  outline: none;
+  box-shadow: 2px 2px 6px #f5d76e;
+}
+
+.testimonial-block {
+  display: flex;
+  height: 424px;
+  background-color: #39312f;
+  margin-bottom: 75px;
+}
+
+.left-testimonial-block {
+  width: 811px;
+  background-image: url(images/CoffeePhoto.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.right-testimonial-block {
+  width: 459px;
+  position: relative;
+}
+
+.testimonial-number {
+  font-size: 90px;
+  color: #433c3b;
+  padding: 20px;
+}
+
+.people-block {
+  width: 300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.human-photo {
+  width: 83px;
+  height: 83px;
+  border-radius: 50%;
+  background-image: url(images/ChrisParker.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 auto;
+}
+
+.human-name {
+  margin: 20px auto;
+  text-align: center;
+  color: #f5d76e;
+  font-size: 20px;
+}
+
+.testimonial {
+  color: white;
+  text-align: center;
+  font-size: 16px;
+}
+
+.pagination-drops {
+  width: 56px;
+  display: flex;
+  justify-content: space-between;
+  margin: 35px auto;
+}
+
+.drop {
+  list-style-type: none;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.drop:hover {
+  background-color: transparent;
+  border: 1px white solid;
+  width: 8px;
+  height: 8px;
+}
+
+.quotes {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+.fa-quote-right {
+  font-size: 90px;
+  color: #433c3b;
+}
+
+.location {
+  display: flex;
+}
+
+.left-location-block {
+  color: black;
+  background-color: #f5d76e;
+  width: 458px;
+}
+
+.right-location-block {
+  width: 812px;
+  height: 425px;
+  background-image: url(images/Map.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.full-lacation {
+  margin: 50px;
+  width: 300px;
+  height: 325px;
+}
+
+.location-item {
+  list-style-type: none;
+  display: block;
+}
+
+.location-name {
+  font-size: 20px;
+}
+
+footer {
+  background-color: #39312f;
+  padding: 95px 0 145px;
+}
+
+.social-networks {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 140px;
+}
+
+.network {
+  list-style-type: none;
+}
+
+.network-link {
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.network-link:hover {
+  color: #f5d76e;
+}
+
+.footer-adress {
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  padding-top: 35px;
 }
