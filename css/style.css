@@ -31,7 +31,7 @@ header {
   height: 100px;
   display: flex;
   align-items: center;
-  background-image: linear-gradient(to top,  black -80px, transparent 100%);
+  background: linear-gradient(to top,  black -80px, transparent 100%);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -108,6 +108,7 @@ header {
   color: white;
   background-color: transparent;
   font-size: 13px;
+  text-transform: uppercase;
 }
 
 .see-menu-button:hover {
@@ -149,6 +150,7 @@ header {
 .menu-list {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .menu-section {
@@ -282,17 +284,21 @@ header {
 
 .drop {
   list-style-type: none;
+  border: 1px white solid;
   width: 10px;
   height: 10px;
   background-color: white;
   border-radius: 50%;
+  background: transparent;
+}
+
+.drop-background {
+  background-color: white;
 }
 
 .drop:hover {
-  background-color: transparent;
-  border: 1px white solid;
-  width: 8px;
-  height: 8px;
+  box-shadow: 2px 2px 6px #f5d76e;
+  cursor: pointer;
 }
 
 .quotes {
@@ -337,6 +343,7 @@ header {
 
 .location-name {
   font-size: 20px;
+  text-transform: uppercase;
 }
 
 .location-description {
