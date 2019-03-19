@@ -233,6 +233,12 @@ header {
   background-size: cover;
 }
 
+.first-testimonial-picture {
+  background-image: url(../images/CoffeePhoto01.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .second-testimonial-picture {
   background-image: url(../images/CoffeePhoto02.png);
   background-repeat: no-repeat;
