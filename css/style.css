@@ -233,16 +233,16 @@ header {
   background-size: cover;
 }
 
+.first-testimonial-picture {
+  background-image: url(../images/CoffeePhoto01.png);
+}
+
 .second-testimonial-picture {
   background-image: url(../images/CoffeePhoto02.png);
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .third-testimonial-picture {
   background-image: url(../images/CoffeePhoto03.png);
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .right-testimonial-block {
