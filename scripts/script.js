@@ -1,20 +1,40 @@
 'use strict';
 
-var userNumber = document.getElementsByClassName ('testimonial-number') [0].textContent;
-var firstDropElement = document.getElementsByClassName ('drop') [0];
-var DropElements = document.getElementsByClassName ('drop');
-var secondDropElement = document.getElementsByClassName ('drop') [1];
-var thirdDropElement = document.getElementsByClassName ('drop') [2];
+var userNumberElement = document.getElementsByClassName ('testimonial-number')[0];
+
+var dropElements = document.getElementsByClassName ('drop');
+var firstDropElement = dropElements[0];
+var secondDropElement = dropElements[1];
+var thirdDropElement = dropElements[2];
+
+
 var testimonialPictureElement = document.getElementsByClassName ('left-testimonial-block') [0];
 
-console.log(userNumber);
+function onDropElementClick(evt) {
+  for (var i = 0; i < dropElements.length; i++) {
+    dropElements[i].classList.add('drop-background');
+  }
 
-if (userNumber == '.01') {
-  firstDropElement.classList.remove('drop-background');
+  if (evt) {
+    console.log(evt.target.getAttribute('data-attr-id'));
+    var targetElementAttrId = evt.target.getAttribute('data-attr-id');
+    evt.target.classList.remove('drop-background');
+
+    if (targetElementAttrId === '1') {
+      userNumberElement.textContent = '.01';
+    } else if (targetElementAttrId === '2') {
+      userNumberElement.textContent = '.02';
+    } else if (targetElementAttrId === '3') {
+      userNumberElement.textContent = '.03';
+    }
+  } else {
+    dropElements[0].classList.remove('drop-background');
+  }
+
 }
-else {
-  firstDropElement.classList.add('drop-background')
-}
+
+onDropElementClick();
+
 
 function changeForFirstPicture() {
 
@@ -23,19 +43,19 @@ function changeForFirstPicture() {
     firstDropElement.classList.remove('drop-background');
     secondDropElement.classList.add('drop-background');
     thirdDropElement.classList.add('drop-background');
+
     testimonialPictureElement.classList.remove('second-testimonial-picture');
     testimonialPictureElement.classList.remove('third-testimonial-picture');
     testimonialPictureElement.classList.add('first-testimonial-picture');
-    userNumber = '.01';
-    document.getElementsByClassName ('testimonial-number') [0].textContent = '.01';
-    console.log(userNumber);
+
+    userNumberElement.textContent = '.01';
     // если у нас выполнилось условие, то мы должны убрать у остальных дроп элементов класс drop-background и добавить данному
     // элементу класс drop-background, а затем блоку .left-testimonial-block (ведь именно он содержит картинку) уже установить класс
     // second-testimonial-picture. Аналогично для второго обработчика события
   }
 }
 
-firstDropElement.addEventListener('click', changeForFirstPicture);
+firstDropElement.addEventListener('click', onDropElementClick);
 
 
 function changeForSecondPicture() {
@@ -45,19 +65,19 @@ function changeForSecondPicture() {
     secondDropElement.classList.remove('drop-background');
     firstDropElement.classList.add('drop-background');
     thirdDropElement.classList.add('drop-background');
+
     testimonialPictureElement.classList.remove('first-testimonial-picture');
     testimonialPictureElement.classList.remove('third-testimonial-picture');
     testimonialPictureElement.classList.add('second-testimonial-picture');
-    userNumber = '.02';
-    document.getElementsByClassName ('testimonial-number') [0].textContent = '.02';
-    console.log(userNumber);
+
+    userNumberElement.textContent = '.02';
     // если у нас выполнилось условие, то мы должны убрать у остальных дроп элементов класс drop-background и добавить данному
     // элементу класс drop-background, а затем блоку .left-testimonial-block (ведь именно он содержит картинку) уже установить класс
     // second-testimonial-picture. Аналогично для второго обработчика события
   }
 }
 
-secondDropElement.addEventListener('click', changeForSecondPicture);
+secondDropElement.addEventListener('click', onDropElementClick);
 
 function changeForThirdPicture() {
 
@@ -66,13 +86,13 @@ function changeForThirdPicture() {
     thirdDropElement.classList.remove('drop-background');
     firstDropElement.classList.add('drop-background');
     secondDropElement.classList.add('drop-background');
+
     testimonialPictureElement.classList.remove('second-testimonial-picture');
     testimonialPictureElement.classList.remove('first-testimonial-picture');
     testimonialPictureElement.classList.add('third-testimonial-picture');
-    userNumber = '.03';
-    document.getElementsByClassName ('testimonial-number') [0].textContent = '.03';
-    console.log(userNumber);
+
+    userNumberElement.textContent = '.03';
   }
 }
 
-thirdDropElement.addEventListener('click', changeForThirdPicture);
+thirdDropElement.addEventListener('click', onDropElementClick);
