@@ -8,7 +8,7 @@ var secondDropElement = dropElements[1];
 var thirdDropElement = dropElements[2];
 
 
-var testimonialPictureElement = document.getElementsByClassName ('left-testimonial-block') [0];
+var testimonialPictureElement = document.getElementsByClassName ('left-testimonial-block')[0];
 
 function onDropElementClick(evt) {
   for (var i = 0; i < dropElements.length; i++) {
@@ -16,83 +16,25 @@ function onDropElementClick(evt) {
   }
 
   if (evt) {
-    console.log(evt.target.getAttribute('data-attr-id'));
     var targetElementAttrId = evt.target.getAttribute('data-attr-id');
     evt.target.classList.remove('drop-background');
 
-    if (targetElementAttrId === '1') {
-      userNumberElement.textContent = '.01';
-    } else if (targetElementAttrId === '2') {
-      userNumberElement.textContent = '.02';
-    } else if (targetElementAttrId === '3') {
-      userNumberElement.textContent = '.03';
+    while (testimonialPictureElement.classList.length > 0) {
+      testimonialPictureElement.classList.remove(testimonialPictureElement.classList[0]);
     }
+
+    testimonialPictureElement.classList.add('left-testimonial-block');
+    testimonialPictureElement.classList.add('testimonial-picture-' + targetElementAttrId);
+
+    userNumberElement.textContent = '.0' + targetElementAttrId;
   } else {
     dropElements[0].classList.remove('drop-background');
+    testimonialPictureElement.classList.add('first-testimonial-picture');
   }
-
 }
 
 onDropElementClick();
 
-
-function changeForFirstPicture() {
-
-  if (firstDropElement.getAttribute('data-attr-id') == 1) {
-
-    firstDropElement.classList.remove('drop-background');
-    secondDropElement.classList.add('drop-background');
-    thirdDropElement.classList.add('drop-background');
-
-    testimonialPictureElement.classList.remove('second-testimonial-picture');
-    testimonialPictureElement.classList.remove('third-testimonial-picture');
-    testimonialPictureElement.classList.add('first-testimonial-picture');
-
-    userNumberElement.textContent = '.01';
-    // если у нас выполнилось условие, то мы должны убрать у остальных дроп элементов класс drop-background и добавить данному
-    // элементу класс drop-background, а затем блоку .left-testimonial-block (ведь именно он содержит картинку) уже установить класс
-    // second-testimonial-picture. Аналогично для второго обработчика события
-  }
-}
-
 firstDropElement.addEventListener('click', onDropElementClick);
-
-
-function changeForSecondPicture() {
-
-  if (secondDropElement.getAttribute('data-attr-id') == 2) {
-
-    secondDropElement.classList.remove('drop-background');
-    firstDropElement.classList.add('drop-background');
-    thirdDropElement.classList.add('drop-background');
-
-    testimonialPictureElement.classList.remove('first-testimonial-picture');
-    testimonialPictureElement.classList.remove('third-testimonial-picture');
-    testimonialPictureElement.classList.add('second-testimonial-picture');
-
-    userNumberElement.textContent = '.02';
-    // если у нас выполнилось условие, то мы должны убрать у остальных дроп элементов класс drop-background и добавить данному
-    // элементу класс drop-background, а затем блоку .left-testimonial-block (ведь именно он содержит картинку) уже установить класс
-    // second-testimonial-picture. Аналогично для второго обработчика события
-  }
-}
-
 secondDropElement.addEventListener('click', onDropElementClick);
-
-function changeForThirdPicture() {
-
-  if (thirdDropElement.getAttribute('data-attr-id') == 3) {
-
-    thirdDropElement.classList.remove('drop-background');
-    firstDropElement.classList.add('drop-background');
-    secondDropElement.classList.add('drop-background');
-
-    testimonialPictureElement.classList.remove('second-testimonial-picture');
-    testimonialPictureElement.classList.remove('first-testimonial-picture');
-    testimonialPictureElement.classList.add('third-testimonial-picture');
-
-    userNumberElement.textContent = '.03';
-  }
-}
-
 thirdDropElement.addEventListener('click', onDropElementClick);
