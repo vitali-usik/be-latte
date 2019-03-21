@@ -245,6 +245,10 @@ header {
   background-image: url(../images/CoffeePhoto03.png);
 }
 
+.testimonial-picture-4 {
+  background-image: url(../images/CoffeePhoto04.png);
+}
+
 .right-testimonial-block {
   width: 459px;
   position: relative;

@@ -6,6 +6,7 @@ var dropElements = document.getElementsByClassName ('drop');
 var firstDropElement = dropElements[0];
 var secondDropElement = dropElements[1];
 var thirdDropElement = dropElements[2];
+var fourthDropElement = dropElements[3];
 
 
 var testimonialPictureElement = document.getElementsByClassName ('left-testimonial-block')[0];
@@ -46,3 +47,4 @@ onDropElementClick();
 firstDropElement.addEventListener('click', onDropElementClick);
 secondDropElement.addEventListener('click', onDropElementClick);
 thirdDropElement.addEventListener('click', onDropElementClick);
+fourthDropElement.addEventListener('click', onDropElementClick);
