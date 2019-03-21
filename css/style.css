@@ -268,10 +268,25 @@ header {
   width: 83px;
   height: 83px;
   border-radius: 50%;
-  background-image: url(../images/man1.png);
   background-repeat: no-repeat;
   background-position: center;
   margin: 0 auto;
+}
+
+.human-photo-1 {
+  background-image: url(../images/man1.png);
+}
+
+.human-photo-2 {
+  background-image: url(../images/man2.png);
+}
+
+.human-photo-3 {
+  background-image: url(../images/man3.png);
+}
+
+.human-photo-4 {
+  background-image: url(../images/man4.png);
 }
 
 .human-name {
