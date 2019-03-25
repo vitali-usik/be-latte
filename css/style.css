@@ -245,6 +245,10 @@ header {
   background-image: url(../images/CoffeePhoto03.png);
 }
 
+.testimonial-picture-4 {
+  background-image: url(../images/CoffeePhoto04.png);
+}
+
 .right-testimonial-block {
   width: 459px;
   position: relative;
@@ -268,10 +272,25 @@ header {
   width: 83px;
   height: 83px;
   border-radius: 50%;
-  background-image: url(../images/ChrisParker.png);
   background-repeat: no-repeat;
   background-position: center;
   margin: 0 auto;
+}
+
+.human-photo-1 {
+  background-image: url(../images/man1.png);
+}
+
+.human-photo-2 {
+  background-image: url(../images/man2.png);
+}
+
+.human-photo-3 {
+  background-image: url(../images/man3.png);
+}
+
+.human-photo-4 {
+  background-image: url(../images/man4.png);
 }
 
 .human-name {
