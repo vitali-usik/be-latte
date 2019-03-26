@@ -1,67 +1,67 @@
 'use strict';
 
-var objectMenu = {
-  menuSection: {
-    sectionName: 'Coffee',
-    sectionPriseList: {
-      priseListPosition: {
-        positionName: 'Latte',
-        positionCost: '$3.00'
+var menu = {
+  section: {
+    title: 'Coffee',
+    priseList: [
+      {
+        name: 'Latte',
+        cost: '$3.00'
       },
-      priseListPosition: {
-        positionName: 'Mocha',
-        positionCost: '$3.25'
+      {
+        name: 'Mocha',
+        cost: '$3.25'
       },
-      priseListPosition: {
-        positionName: 'Expresso',
-        positionCost: '$3.75'
+      {
+        name: 'Expresso',
+        cost: '$3.75'
       },
-      priseListPosition: {
-        positionName: 'Capuccino',
-        positionCost: '$3.00'
+      {
+        name: 'Capuccino',
+        cost: '$3.00'
       }
-    }
+    ]
   },
-  menuSection: {
-    sectionName: 'Tea',
-    sectionPriseList: {
-      priseListPosition: {
-        positionName: 'Iced tea',
-        positionCost: '$2.75'
+  section: {
+    title: 'Tea',
+    priseList: [
+      {
+        name: 'Iced tea',
+        cost: '$2.75'
       },
-      priseListPosition: {
-        positionName: 'Cold brew',
-        positionCost: '$3.25'
+      {
+        name: 'Cold brew',
+        cost: '$3.25'
       },
-      priseListPosition: {
-        positionName: 'Jasmine green',
-        positionCost: '$3.75'
+      {
+        name: 'Jasmine green',
+        cost: '$3.75'
       },
-      priseListPosition: {
-        positionName: 'Peppermint Herbal',
-        positionCost: '$3.00'
+      {
+        name: 'Peppermint Herbal',
+        cost: '$3.00'
       }
-    }
+    ]
   },
-  menuSection: {
-    sectionName: 'Desert',
-    sectionPriseList: {
-      priseListPosition: {
-        positionName: 'Tiramisu',
-        positionCost: '$3.00'
+  section: {
+    title: 'Desert',
+    priseList: [
+      {
+        name: 'Tiramisu',
+        cost: '$3.00'
       },
-      priseListPosition: {
-        positionName: 'Cheese cake',
-        positionCost: '$3.25'
+      {
+        name: 'Cheese cake',
+        cost: '$3.25'
       },
-      priseListPosition: {
-        positionName: 'Black forest',
-        positionCost: '$3.75'
+      {
+        name: 'Black forest',
+        cost: '$3.75'
       },
-      priseListPosition: {
-        positionName: 'Brownie',
-        positionCost: '$3.00'
+      {
+        name: 'Brownie',
+        cost: '$3.00'
       }
-    }
+    ]
   }
 };
