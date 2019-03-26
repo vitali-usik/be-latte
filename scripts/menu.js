@@ -1,7 +1,7 @@
 'use strict';
 
-var menu = {
-  section: {
+var menu = [
+  {
     title: 'Coffee',
     priseList: [
       {
@@ -22,7 +22,7 @@ var menu = {
       }
     ]
   },
-  section: {
+  {
     title: 'Tea',
     priseList: [
       {
@@ -43,7 +43,7 @@ var menu = {
       }
     ]
   },
-  section: {
+  {
     title: 'Desert',
     priseList: [
       {
@@ -64,4 +64,24 @@ var menu = {
       }
     ]
   }
-};
+];
+
+const template = document.getElementById('menu-item').content;
+const menuItemElement = template.querySelector('.menu-section');
+
+const fragment = document.createDocumentFragment();
+// const menuItem = menuItemElement.cloneNode();
+
+menu.forEach((item) => {
+  const menuItem = menuItemElement.cloneNode(true);
+  const heading = menuItem.querySelector('.menu-picture');
+  heading.textContent = item.title;
+  fragment.appendChild(menuItem);
+});
+
+const menuListElement = document.getElementById('menuListId');
+menuListElement.appendChild(fragment);
+
+// console.log('fragment', fragment);
+//
+// console.log(`menu`, menu);
