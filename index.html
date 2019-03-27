@@ -77,77 +77,8 @@
           <h2 class="block-title">
             MENU
           </h2>
-          <ul class="menu-list">
-            <li class="menu-section">
-              <div class="menu-picture coffee-menu-picture">
-                COFFEE
-              </div>
-              <table class="assortment">
-                <tr class="position">
-                  <td class="name">Latte</td>
-                  <td class="prise">$3.00</td>
-                </tr>
-                <tr class="position">
-                  <td class="name">Mocha</td>
-                  <td class="prise">$3.25</td>
-                </tr>
-                <tr class="position">
-                  <td class="name">Expresso</td>
-                  <td class="prise">$3.75</td>
-                </tr>
-                <tr class="position">
-                  <td class="name">Capuccino</td>
-                  <td class="prise">$3.00</td>
-                 </tr>
-                </table>
-              </li>
-              <li class="menu-section">
-                <div class="menu-picture tea-menu-picture">
-                  TEA
-                </div>
-                <table class="assortment">
-                  <tr class="position">
-                    <td class="name">Iced tea</td>
-                    <td class="prise">$2.75</td>
-                  </tr>
-                  <tr class="position">
-                    <td class="name">Cold brew</td>
-                    <td class="prise">$3.25</td>
-                  </tr>
-                  <tr class="position">
-                    <td class="name">Jasmine green</td>
-                    <td class="prise">$3.75</td>
-                  </tr>
-                  <tr class="position">
-                    <td class="name">Peppermint Herbal</td>
-                    <td class="prise">$3.00</td>
-                  </tr>
-                </table>
-              </li>
-              <li class="menu-section">
-                <div class="menu-picture desert-menu-picture">
-                  DESERT
-                </div>
-                <table class="assortment">
-                  <tr class="position">
-                    <td class="name">Tiramisu</td>
-                    <td class="prise">$3.00</td>
-                  </tr>
-                  <tr class="position">
-                    <td class="name">Cheese cake</td>
-                    <td class="prise">$3.25</td>
-                  </tr>
-                  <tr class="position">
-                    <td class="name">Black forest</td>
-                    <td class="prise">$3.75</td>
-                  </tr>
-                  <tr class="position">
-                    <td class="name">Brownie</td>
-                    <td class="prise">$3.00</td>
-                  </tr>
-                </table>
-              </li>
-            </ul>
+          <ul class="menu-list" id="menu-list-id">
+          </ul>
             <button class="see-full-menu">
               SEE FULL MENU
             </button>
@@ -255,5 +186,21 @@
           </p>
         </footer>
       </div>
+      <template id="menu-template">
+        <li class="menu-section">
+          <div class="menu-picture coffee-menu-picture">
+            COFFEE
+          </div>
+          <table class="assortment">
+            
+            <tr class="position">
+              <td class="name">Latte</td>
+              <td class="prise">$3.00</td>
+            </tr>
+
+            </table>
+          </li>
+      </template>
       <script src="scripts/script.js"></script>
+      <script src="scripts/menu.js"></script>
     </body>

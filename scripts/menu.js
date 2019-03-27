@@ -1,7 +1,12 @@
 'use strict';
 
-var menu = {
-  section: {
+var menuTemplate = document.getElementById('menu-template').content;
+var menuItemElement = menuTemplate.querySelector('.menu-section');
+var menuListElement = document.getElementById('menu-list-id');
+console.log(menuItemElement);
+
+var menu = [
+  {
     title: 'Coffee',
     priseList: [
       {
@@ -22,7 +27,7 @@ var menu = {
       }
     ]
   },
-  section: {
+  {
     title: 'Tea',
     priseList: [
       {
@@ -43,7 +48,7 @@ var menu = {
       }
     ]
   },
-  section: {
+  {
     title: 'Desert',
     priseList: [
       {
@@ -64,4 +69,13 @@ var menu = {
       }
     ]
   }
-};
+];
+
+for (var i = 0; i < menu.length; i++) {
+  var currentItem = menuItemElement.cloneNode(true);
+  console.log( menu[i] );
+  currentItem.querySelector('.menu-picture').textContent = menu[i].title;
+
+
+  menuListElement.appendChild(currentItem);
+}
