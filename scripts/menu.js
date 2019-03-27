@@ -3,11 +3,15 @@
 var menuTemplate = document.getElementById('menu-template').content;
 var menuItemElement = menuTemplate.querySelector('.menu-section');
 var menuListElement = document.getElementById('menu-list-id');
-console.log(menuItemElement);
+console.log(menuListElement);
+var positionTemplate = document.getElementById('position-template').content;
+var positionElement = positionTemplate.querySelector('.position');
+var assortmentElement = document.getElementById('assortment-id');
+console.log(assortmentElement);
 
 var menu = [
   {
-    title: 'Coffee',
+    title: 'coffee',
     priseList: [
       {
         name: 'Latte',
@@ -28,7 +32,7 @@ var menu = [
     ]
   },
   {
-    title: 'Tea',
+    title: 'tea',
     priseList: [
       {
         name: 'Iced tea',
@@ -49,7 +53,7 @@ var menu = [
     ]
   },
   {
-    title: 'Desert',
+    title: 'desert',
     priseList: [
       {
         name: 'Tiramisu',
@@ -75,6 +79,22 @@ for (var i = 0; i < menu.length; i++) {
   var currentItem = menuItemElement.cloneNode(true);
   console.log( menu[i] );
   currentItem.querySelector('.menu-picture').textContent = menu[i].title;
+
+  for (var j = 0; j < menu[i].priseList.length; j++) {
+    var currentPosition = positionElement.cloneNode(true);
+    console.log(currentPosition);
+    currentPosition.querySelector('.name').textContent = menu[i].priseList[j].name;
+    currentPosition.querySelector('.prise').textContent = menu[i].priseList[j].cost;
+    assortmentElement.appendChild(currentPosition);
+  }
+
+  /*while (currentItem.querySelector('.menu-picture').classList.length > 0) {
+  currentItem.getElementById('menu-section-title').classList.remove(currentItem.getElementById('menu-section-title').classList[0]);
+  }
+  currentItem.getElementById('menu-section-title').classList.add('menu-picture');
+  currentItem.getElementById('menu-section-title').classList.add(menu[i].title + 'menu-picture');*/
+
+
 
 
   menuListElement.appendChild(currentItem);
