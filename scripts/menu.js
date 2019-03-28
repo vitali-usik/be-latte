@@ -1,8 +1,17 @@
 'use strict';
 
-var menu = {
-  section: {
-    title: 'Coffee',
+var menuTemplate = document.getElementById('menu-template').content;
+var menuItemElement = menuTemplate.querySelector('.menu-section');
+
+var positionTemplate = document.getElementById('position-template').content;
+var positionElement = positionTemplate.querySelector('.position');
+
+var menuListElement = document.getElementById('menu-list-id');
+
+var menu = [
+  {
+    title: 'coffee',
+    imgClass: 'coffee-menu-picture',
     priseList: [
       {
         name: 'Latte',
@@ -22,8 +31,9 @@ var menu = {
       }
     ]
   },
-  section: {
-    title: 'Tea',
+  {
+    title: 'tea',
+    imgClass: 'tea-menu-picture',
     priseList: [
       {
         name: 'Iced tea',
@@ -43,8 +53,9 @@ var menu = {
       }
     ]
   },
-  section: {
-    title: 'Desert',
+  {
+    title: 'desert',
+    imgClass: 'desert-menu-picture',
     priseList: [
       {
         name: 'Tiramisu',
@@ -64,4 +75,21 @@ var menu = {
       }
     ]
   }
-};
+];
+
+for (var i = 0; i < menu.length; i++) {
+  var currentItem = menuItemElement.cloneNode(true);
+
+  currentItem.querySelector('.menu-picture').textContent = menu[i].title;
+  currentItem.querySelector('.menu-picture').classList.add(menu[i].imgClass);
+
+  for (var j = 0; j < menu[i].priseList.length; j++) {
+    var currentPosition = positionElement.cloneNode(true);
+
+    currentPosition.querySelector('.name').textContent = menu[i].priseList[j].name;
+    currentPosition.querySelector('.prise').textContent = menu[i].priseList[j].cost;
+    currentItem.querySelector('#assortment-id').appendChild(currentPosition);
+  }
+
+  menuListElement.appendChild(currentItem);
+}
